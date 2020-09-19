@@ -37,19 +37,19 @@ public class Company implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Integer id;
     @Basic(optional = false)
-    @Column(name = "company", nullable = false, length = 255)
+    @Column(name = "company")
     private String company;
     @Basic(optional = false)
-    @Column(name = "email", nullable = false, length = 255)
+    @Column(name = "email")
     private String email;
     @Basic(optional = false)
-    @Column(name = "phone", nullable = false, length = 255)
+    @Column(name = "phone")
     private String phone;
     @Basic(optional = false)
-    @Column(name = "password", nullable = false, length = 255)
+    @Column(name = "password")
     private String password;
 
     public Company() {

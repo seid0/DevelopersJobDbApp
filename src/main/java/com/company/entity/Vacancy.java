@@ -40,33 +40,33 @@ public class Vacancy implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Integer id;
     @Basic(optional = false)
-    @Column(name = "salary", nullable = false, length = 255)
+    @Column(name = "salary")
     private String salary;
     @Basic(optional = false)
-    @Column(name = "job_name", nullable = false, length = 255)
+    @Column(name = "job_name")
     private String jobName;
     @Basic(optional = false)
-    @Column(name = "city", nullable = false, length = 255)
+    @Column(name = "city")
     private String city;
     @Basic(optional = false)
-    @Column(name = "age", nullable = false, length = 255)
+    @Column(name = "age")
     private String age;
     @Basic(optional = false)
     @Lob
-    @Column(name = "job_information", nullable = false, length = 65535)
+    @Column(name = "job_information")
     private String jobInformation;
     @Basic(optional = false)
     @Lob
-    @Column(name = "requirements", nullable = false, length = 65535)
+    @Column(name = "requirements")
     private String requirements;
     @Basic(optional = false)
-    @Column(name = "education", nullable = false, length = 65)
+    @Column(name = "education")
     private String education;
     @Basic(optional = false)
-    @Column(name = "experience", nullable = false, length = 255)
+    @Column(name = "experience")
     private String experience;
 
     public Vacancy() {

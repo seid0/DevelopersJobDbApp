@@ -1,5 +1,6 @@
-package com;
+package com.company;
 
+import com.company.dao.inter.UserDaoInter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import com.company.dao.inter.VacancyDaoInter;
+import com.company.entity.User;
 import com.company.entity.Vacancy;
 
 @SpringBootApplication
@@ -19,7 +21,7 @@ public class DevelopersJobDbAppApplication {
 //    private CompanyDaoInter companyDaoInter;
 
      @Autowired
-     private VacancyDaoInter vacancyDaoInter;
+     private UserDaoInter userDaoInter;
     public static void main(String[] args) {
         SpringApplication.run(DevelopersJobDbAppApplication.class, args);
     }
@@ -30,9 +32,9 @@ public class DevelopersJobDbAppApplication {
 
             @Override
             public void run(String... args) throws Exception {
-                List<Vacancy> vacancy = vacancyDaoInter.getAllVacancy(null, null, null, null);
+                List<User> user = userDaoInter.getAll(null, null);
 
-                System.out.println("list size=" + vacancy.size());
+                System.out.println("list size=" + user.size());
             }
         };
         return clr;

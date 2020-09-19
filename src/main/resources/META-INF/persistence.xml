@@ -4,6 +4,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.company.entity.Vacancy</class>
     <class>com.company.entity.Company</class>
+    <class>com.company.entity.User</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/developers_job?serverTimezone=Asia/Baku"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
